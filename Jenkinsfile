@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage('Build'){
-            steps{\
+            steps{
                 echo 'Building the project with Maven'
                 echo 'BUILD SUCCESS'
             }
@@ -18,13 +18,13 @@ pipeline{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Testing was successful",
-                    attachLog: true
+                    attachmentsPattern: "${logFile}"
                 }
                 failure{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Testing detected errors",
-                    attachLog: true
+                    attachmentsPattern: "${logFile}"
                 }
             }
         }
@@ -44,13 +44,13 @@ pipeline{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Security Scan was successful",
-                    attachLog: true
+                    attachmentsPattern: "${logFile}"
                 }
                 failure{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Security Scan detected vulnerabilities",
-                    attachLog: true
+                    attachmentsPattern: "${logFile}"
                 }
             }
         }
