@@ -24,7 +24,8 @@ pipeline{
                     emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Testing detected errors",
-                    attachLog: true                }
+                    attachLog: true
+                }
             }
         }
         stage('Code Analysis'){
@@ -49,7 +50,7 @@ pipeline{
                     emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Security Scan detected vulnerabilities",
-                    //attachLog: true
+                    attachLog: true
                 }
             }
         }
