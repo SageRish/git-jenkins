@@ -15,17 +15,16 @@ pipeline{
             }
             post{
                 success{
-                    mail to: "s222458666@gmail.com",
+                    emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Testing was successful"
-                    //attachLog: true, attachmentsPattern: 'generatedFile.txt'
+                    body: "Testing was successful",
+                    attachLog: true
                 }
                 failure{
-                    mail to: "s222458666@gmail.com",
+                    emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Testing detected errors"
-                    //attachLog: true, attachmentsPattern: 'generatedFile.txt'
-                }
+                    body: "Testing detected errors",
+                    attachLog: true                }
             }
         }
         stage('Code Analysis'){
@@ -41,16 +40,16 @@ pipeline{
             }
             post{
                 success{
-                    mail to: "s222458666@gmail.com",
+                    emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Security Scan was successful"
-                    //attachLog: true, attachmentsPattern: 'generatedFile.txt'
+                    body: "Security Scan was successful",
+                    attachLog: true
                 }
                 failure{
-                    mail to: "s222458666@gmail.com",
+                    emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Security Scan detected vulnerabilities"
-                    //attachLog: true, attachmentsPattern: 'generatedFile.txt'
+                    body: "Security Scan detected vulnerabilities",
+                    //attachLog: true
                 }
             }
         }
