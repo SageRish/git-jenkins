@@ -15,7 +15,7 @@ pipeline{
             }
             post{
                 success{
-                    emailext to: "s222458666@deakin.edu.au",
+                    emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Testing was successful",
                     attachLog: true
@@ -41,7 +41,7 @@ pipeline{
             }
             post{
                 success{
-                    emailext to: "s222458666@deakin.edu.au",
+                    emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Security Scan was successful",
                     attachLog: true
