@@ -17,13 +17,13 @@ pipeline{
                 success{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Testing was successful",
+                    body: "Testing was successful"
                     //attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
                 failure{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Testing detected errors",
+                    body: "Testing detected errors"
                     //attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
             }
@@ -43,13 +43,13 @@ pipeline{
                 success{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Security Scan was successful",
+                    body: "Security Scan was successful"
                     //attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
                 failure{
                     mail to: "s222458666@gmail.com",
                     subject: "Testing Status",
-                    body: "Security Scan detected vulnerabilities",
+                    body: "Security Scan detected vulnerabilities"
                     //attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
             }
