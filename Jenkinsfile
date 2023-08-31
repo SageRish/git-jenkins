@@ -18,13 +18,13 @@ pipeline{
                     emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Testing was successful",
-                    attachLog: true, attachmentsPattern: 'generatedFile.txt',
+                    attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
                 failure{
                     emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Testing detected errors",
-                    attachLog: true, attachmentsPattern: 'generatedFile.txt',
+                    attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
             }
         }
@@ -44,13 +44,13 @@ pipeline{
                     emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Security Scan was successful",
-                    attachLog: true, attachmentsPattern: 'generatedFile.txt',
+                    attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
                 failure{
                     emailext to: "s222458666@gmail.com",
                     subject: "Testing Status",
                     body: "Security Scan detected vulnerabilities",
-                    attachLog: true, attachmentsPattern: 'generatedFile.txt',
+                    attachLog: true, attachmentsPattern: 'generatedFile.txt'
                 }
             }
         }
